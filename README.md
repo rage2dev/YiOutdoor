@@ -19,6 +19,15 @@
 	udhcpc -i wlan0 -b -s /backup/script/default.script &
 	sleep 10
 	/bin/busybox telnetd -l/bin/ash -p9999 &
-  
+	
+# Install
+	- Create a fat32 formated SD-Card
+	- Create folder wifi
+	- Copy config.sh to "wifi/"
+	- Insert SD-Card, reboot Cam
+	- telnet yourcamip -p 9999
+  	- username: "root"
+	- password: EMPTY
+	
 # How to flash new firmware
   The Cam is looking for /tmp/sd/home_r10m on boot and will flash it if it exists
